@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ubuntu/webhook-docker-demo
+cd ~/Datasirpi-task/webhook-docker
 
 git pull origin main
 
