@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: mypython-web
+  labels:
+    app: myweb_label
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: myweb_label
+
+  template:
+    metadata:
+      labels:
+        app: myweb_label
+
+    spec:
+      containers:
+        - name: myweb-cont
+          image: wathooth/sample:latest
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 5000
